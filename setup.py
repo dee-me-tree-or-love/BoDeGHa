@@ -4,7 +4,8 @@ from codecs import open # To use a consistent encoding
 
 
 __package__ = 'bodegha'
-__version__ = '1.0.3'
+__version__ = '1.0.4-pre1'
+__python_requires__ = '>=3.9,<3.10'
 __licence__ = 'LGPL3'
 __maintainer__ = 'Mehdi Golzadeh'
 __email__ = 'golzadeh.mehdi@gmail.com'
@@ -36,13 +37,15 @@ __requirement__ = [
         'tqdm >= 4.41.1',
         'urllib3 >= 1.25',
         'python-levenshtein >= 0.12.2',
-        'numpy >= 1.17.4',
+        'numpy == 1.*',
 ]
 
 setup(
     name=__package__,
 
     version=__version__,
+
+    python_requires=__python_requires__,
 
     description= __description__,
     long_description=__long_description__,
